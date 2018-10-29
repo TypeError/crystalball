@@ -1,0 +1,28 @@
+{
+  "name": "crystalball",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cakinney/crystalball"
+  },
+  "keywords": [
+    "scraping"
+  ],
+  "description": "Web Screenshot Project",
+  "main": "lib/larp.js",
+  "types": "lib/larp.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "author": "Caleb Kinney",
+  "license": "MIT",
+  "dependencies": {
+    "larp": "^1.0.1",
+    "puppeteer": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^1.9.1"
+  }
+}

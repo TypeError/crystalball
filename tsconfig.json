@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true,
+    "lib": ["es2015", "dom"]
+  },
+  "include": ["src", "node_modules/@types/puppeteer/index.d.ts"],
+  "exclude": ["node_modules"]
+}

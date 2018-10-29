@@ -9,8 +9,8 @@
     "scraping"
   ],
   "description": "Web Screenshot Project",
-  "main": "lib/larp.js",
-  "types": "lib/larp.d.ts",
+  "main": "lib/crystalball.js",
+  "types": "lib/crystalball.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",

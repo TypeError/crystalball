@@ -2,7 +2,7 @@
 
 Web Screenshot Project
 
-Crystal Ball is a library that takes an array of URLs and returns a report with screenshots (using [Puppeteer](https://developers.google.com/web/tools/puppeteer/), headers and src/href references.
+Crystal Ball is a library that takes an array of URLs and returns a report with screenshots (using [Puppeteer](https://developers.google.com/web/tools/puppeteer/)), headers and src/href references.
 
 ## Usage
 
@@ -17,7 +17,7 @@ Require: `const O = require("crystalball");`
 
 ## Functions
 
-The see function takes an array of URlS and the output file name.
+The see function takes an array of URLS and the output file name.
 
 ```javascript
 O.see(["http://www.example`.com", "http://www.example2.com"], "example");

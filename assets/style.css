@@ -1,0 +1,154 @@
+body {
+  width: 80%;
+  margin: auto;
+  background-color: #242e2e;
+}
+
+a {
+  color: #cd5fd7;
+  text-decoration: none;
+}
+
+h1.title {
+  margin-top: 50px;
+  color: #eb6123;
+}
+
+div.headers {
+  color: #91e435;
+}
+
+div.href,
+div.src {
+  margin-top: 30px;
+}
+
+th {
+  color: #242e2e;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+th.header {
+  font-size: 24px;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  text-align: left;
+  border-style: hidden;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+td {
+  padding: 5px;
+  border: 3px solid #465959;
+}
+
+tr:nth-child(odd) {
+  background-color: #2e2e24;
+}
+
+tr:nth-child(even) {
+  background-color: #2e242e;
+}
+
+table.headers th {
+  background-color: #91e435;
+}
+
+table.headers td {
+  max-width: 550px;
+  min-width: 150px;
+  word-wrap: break-word;
+  color: #91e435;
+}
+
+table.headers td:first-child {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+table.href th {
+  background-color: #a2edfd;
+}
+
+table.src th {
+  background-color: #f0c383;
+}
+
+table.href,
+table.src td {
+  max-width: 250px;
+  min-width: 200px;
+  word-wrap: break-word;
+}
+
+table.src td {
+  color: #f0c383;
+}
+
+div.src {
+  color: #f0c383;
+  float: right;
+  width: 40%;
+}
+
+table.href td {
+  color: #a2edfd;
+}
+
+div.href {
+  color: #a2edfd;
+  float: left;
+  width: 40%;
+}
+
+ol {
+  list-style: decimal-leading-zero;
+  list-style-position: outside;
+}
+
+ul.headers {
+  list-style: none;
+  list-style-position: outside;
+}
+
+br.clear {
+  clear: both;
+}
+
+h1.logo {
+  color: #cd5fd7;
+  font-size: 100px;
+  text-shadow: -2px 0px 2px #fff, -4px 1px 3px #f0c383, -6px 2px 5px #91e435;
+  margin-bottom: 0px;
+}
+
+h1 {
+  text-align: center;
+}
+
+img.screenshot {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5%;
+  border: 5px solid #cd5fd7;
+}
+
+hr {
+  border-top: 5px solid #f0c383;
+  border-bottom: 5px solid #cd5fd7;
+}

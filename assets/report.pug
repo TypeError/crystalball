@@ -1,0 +1,47 @@
+title #{title}
+head
+    style
+        include style.css
+body
+    h1.logo Crystalball
+    hr
+    div.data
+            each site in data
+                h1.title #{site.title} 🔮 
+                    a(href=site.url) #{site.url}
+                img.screenshot(src=site.image)
+                br
+                br
+
+                div.headers
+                    table.headers
+                        tr
+                            th.header(colspan="2") Headers
+                        tr
+                            th Name
+                            th Value
+                        each value, name in site.headers
+                            tr
+                                td= name
+                                td= value
+                        tr
+                    
+                div.href
+                  table.href
+                    tr
+                        th.header HREF
+                    each url in site.href
+                        tr
+                            td= url
+                    
+                div.src
+                  table.src
+                    tr
+                        th.header SRC
+                    each url in site.src
+                        tr
+                            td= url
+                            
+                br.clear
+                br
+                hr  

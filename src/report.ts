@@ -2,7 +2,8 @@ const fs = require("fs");
 const pug = require("pug");
 
 export function createReport(reportData: object[], filename: string) {
-  const pugFileName = `${__dirname.replace("lib", "assets")}/report.pug`;
+  const assetsFolder = `${__dirname}/../assets`;
+  const pugFileName = `${assetsFolder}/report.pug`;
   const pugFile = pug.compileFile(pugFileName);
   const html = pugFile({ title: "CrystalBall", data: reportData });
   fs.appendFileSync(filename, html, function(err: Error) {

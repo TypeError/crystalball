@@ -3,20 +3,20 @@ const puppeteer = require("puppeteer");
 
 export async function go(url: string) {
   let puppetData: Object | undefined = {};
-  console.log(`Running Puppeteer on ${url}`);
+  console.log(`Running Puppeteer on: ${url}`);
   const urlFileName = url
     .replace("://", "_")
-    .replace("/", "-")
-    .replace(".", "_");
+    .replace(/\//g, "-")
+    .replace(/\./g, "_");
   const imageFile = `crystalball/screenshots/${urlFileName}.png`;
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     const response = await page.goto(url, {
-      waitUntil: "networkidle2"
+      waitUntil: "networkidle0"
     });
     if (response.ok) {
-      await page.screenshot({ path: imageFile, fullpage: true });
+      await page.screenshot({ path: imageFile, fullPage: true });
       const html = await page.content(); //?
       const headers = await response.headers();
       const pageTitle = await page.title();
@@ -30,7 +30,8 @@ export async function go(url: string) {
         headers: headers,
         source: html,
         src: pageSrc,
-        href: pageHref
+        href: pageHref,
+        fileName: urlFileName
       };
       puppetData = resData;
     }

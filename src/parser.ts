@@ -2,11 +2,15 @@ const O = require("./crystalball");
 
 interface parseOptions {
   file?: boolean;
+  filename?: string;
   prefix?: boolean;
   ports?: boolean;
+  connections?: number;
 }
 
 export function urlParse(urls: string[], options?: parseOptions) {
+  let chunkSize = 10;
+
   if (options) {
     if (options.prefix) {
       urls = urls.map(url =>
@@ -31,9 +35,21 @@ export function urlParse(urls: string[], options?: parseOptions) {
 
       urls = urls.concat(urlPort);
     }
+
+    if (options.connections) {
+      chunkSize = options.connections;
+    }
   }
 
   const urlSet = new Set(urls);
   urls = [...urlSet];
-  return urls;
+  urls = urls.filter(url => url.length > 6).filter(url => url !== undefined);
+
+  let results = [];
+
+  while (urls.length) {
+    results.push(urls.splice(0, chunkSize));
+  }
+
+  return results;
 }

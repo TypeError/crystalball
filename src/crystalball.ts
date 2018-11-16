@@ -8,6 +8,18 @@ interface parseOptions {
   filename?: string;
   prefix?: boolean;
   ports?: boolean;
+  connections?: number;
+}
+
+interface puppetObject {
+  url: string;
+  title: string;
+  image: string;
+  headers: Object;
+  source: string;
+  src: string[];
+  href: string[];
+  fileName?: string;
 }
 
 export function file(
@@ -39,14 +51,26 @@ export async function see(
   report.createFolders();
   const urls = await parser.urlParse(input, options);
   let reportData: object[] = [];
-  for (let url of urls) {
-    const puppetData = await puppetry.go(url);
-    if (puppetData != undefined) {
-      reportData.push(puppetData);
-    }
+
+  for (let chunk of urls) {
+    await Promise.all(
+      chunk.map(async function(url: string) {
+        try {
+          const data = await puppetry.go(url);
+          if (data !== undefined) {
+            reportData.push(data);
+          }
+          return data;
+        } catch (err) {
+          console.error("Puppeteer Error: ", err);
+        }
+      })
+    );
   }
+
   console.log("Creating CrystalBall report");
-  report.createReport(reportData, reportFile);
+  await report.createReport(reportData, reportFile);
+  await report.saveData(reportData);
   console.log("CrystalBall Complete");
   process.exit();
 }

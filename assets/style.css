@@ -1,5 +1,5 @@
 body {
-  width: 80%;
+  width: 90%;
   margin: auto;
   background-color: #242e2e;
 }
@@ -14,24 +14,15 @@ h1.title {
   color: #eb6123;
 }
 
-div.headers {
-  color: #91e435;
-}
-
-div.href,
-div.src {
-  margin-top: 30px;
-}
-
 th {
   color: #242e2e;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 10px;
 }
 
 th.header {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 table,
@@ -53,6 +44,7 @@ table tr:first-child th:last-child {
 td {
   padding: 5px;
   border: 3px solid #465959;
+  font-size: 12px;
 }
 
 tr:nth-child(odd) {
@@ -68,15 +60,12 @@ table.headers th {
 }
 
 table.headers td {
-  max-width: 550px;
-  min-width: 150px;
-  word-wrap: break-word;
   color: #91e435;
 }
 
 table.headers td:first-child {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 table.href th {
@@ -87,10 +76,9 @@ table.src th {
   background-color: #f0c383;
 }
 
+table.headers,
 table.href,
 table.src td {
-  max-width: 250px;
-  min-width: 200px;
   word-wrap: break-word;
 }
 
@@ -98,20 +86,36 @@ table.src td {
   color: #f0c383;
 }
 
-div.src {
-  color: #f0c383;
-  float: right;
-  width: 40%;
+div.data-items {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
-table.href td {
-  color: #a2edfd;
+div.headers {
+  color: #91e435;
+  float: left;
+}
+
+div.src,
+div.href {
+  float: left;
+  padding-left: 20px;
 }
 
 div.href {
   color: #a2edfd;
+}
+
+div.src {
+  color: #f0c383;
   float: left;
-  width: 40%;
+  padding-left: 20px;
+}
+
+table.href td {
+  color: #a2edfd;
 }
 
 ol {
@@ -140,12 +144,19 @@ h1 {
 }
 
 img.screenshot {
-  max-width: 90%;
   height: auto;
   display: block;
   margin: 0 auto;
   border-radius: 5%;
   border: 5px solid #cd5fd7;
+}
+
+img.small {
+  max-width: 45%;
+}
+
+img.large {
+  max-width: 95%;
 }
 
 hr {

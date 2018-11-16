@@ -7,8 +7,8 @@ interface parseOptions {
   filename?: string;
   prefix?: boolean;
   ports?: boolean;
+  connections?: number;
 }
-
 function commands() {
   try {
     let options: parseOptions = {};
@@ -21,9 +21,13 @@ function commands() {
       if (args.includes("ports")) {
         options.ports = true;
       }
+
+      if (typeof Number(args[args.length - 1]) == "number") {
+        options.connections = parseInt(args[args.length - 1]);
+      }
+
       if (args.includes("file")) {
         const input = args[0];
-
         O.file(input, options);
       } else {
         const input = args[0].split(",");

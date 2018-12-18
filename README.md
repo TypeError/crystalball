@@ -8,6 +8,8 @@ A Magical Web Screenshot Project
 
 Crystal Ball 🔮 is a library that takes an array or file of URLs and returns a report with screenshots (using [Puppeteer](https://developers.google.com/web/tools/puppeteer/)), application headers and src/href references. 
 
+*For information on downloading and installing Node.js, see [nodejs.org](https://nodejs.org).*
+
 ## Usage
 ### Crystal Ball Command Line Install   
 
@@ -23,24 +25,24 @@ The *first* parameter is URL(s) (encapsulated in quotes, separated by commas) or
 
 * `prefix` : Prefix http and https to each URL  
 * `port` : Add additional port 8080 for HTTP and 8443 for HTTPS  
-* `file` : Use the first parameter as a filename (instead of URLs) to parse (URLs separated by a new line)
+* `file` : Use the first parameter as a filename (instead of URLs) to parse *(URLs separated by a new line)*
 
 If the last argument is a number, it will specify the number of concurrent connections *(default = 10)*. 
 
 *Note: The `file` argument **must** be included to use a filename.* 
 
-##### Examples:
+### Examples:
 
-Array of URLS:  
+**Array of URLS:**  
 `crystalball 'http://example.com, http://example1.com'`  
 
-Array of URLS with Options:  
+**Array of URLS with Options:**  
 `crystalball 'http://example.com, http://example1.com' prefix ports 15` 
 
-File (must include `file` argument):  
+**File (must include `file` argument):**  
 `crystalball 'example.txt' file`   
 
-File with Options:  
+**File with Options:**  
 `crystalball 'example.txt' file prefix ports 15`  
 
 *Note: The **first** argument should be encapsulated in quotes.* 
@@ -48,7 +50,7 @@ File with Options:
 ### Module Install
 
 ```
-$ npm install crystalball`
+$ npm install crystalball
 ```
 
 #### Modules

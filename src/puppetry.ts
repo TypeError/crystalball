@@ -13,7 +13,7 @@ export async function go(url: string) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     const response = await page.goto(url, {
-      waitUntil: "networkidle0"
+      waitUntil: "networkidle0",
     });
     if (response.ok) {
       await page.screenshot({ path: imageFile, fullPage: true });
@@ -31,11 +31,11 @@ export async function go(url: string) {
         source: html,
         src: pageSrc,
         href: pageHref,
-        fileName: urlFileName
+        fileName: urlFileName,
       };
       puppetData = resData;
     }
-  } catch (err) {
+  } catch (err: any) {
     console.error("Puppeteer Error: ", err.message);
     puppetData = undefined;
   } finally {

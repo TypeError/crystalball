@@ -39,7 +39,7 @@ function commands() {
         Example: crystalball example.txt file prefix ports`
       );
     }
-  } catch (err) {
+  } catch (err: any) {
     console.error("CrystalBall Error:", err.message);
   }
 }

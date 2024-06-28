@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cakinney/crystalball"
+    "url": "https://github.com/typeerror/crystalball"
   },
   "keywords": [
     "scraping",
@@ -24,13 +24,12 @@
   },
   "dependencies": {
     "larp": "^1.0.1",
-    "pug": "^3.0.1",
-    "puppeteer": "^1.10.0"
+    "pug": "^3.0.3",
+    "puppeteer": "^22.12.1"
   },
   "devDependencies": {
-    "@types/node": "^10.12.3",
-    "@types/pug": "^2.0.4",
-    "@types/puppeteer": "^1.10.0",
-    "ts-node": "^7.0.1"
+    "@types/node": "^20.14.9",
+    "@types/pug": "^2.0.10",
+    "ts-node": "^10.9.2"
   }
 }
